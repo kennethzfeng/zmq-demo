@@ -7,6 +7,10 @@ Collects weather updates and find avg temp in zipcode
 import zmq
 import sys
 
+from util import display_version
+
+
+display_version()
 
 context = zmq.Context()
 socket = context.socket(zmq.SUB)

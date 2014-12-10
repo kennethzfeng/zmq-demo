@@ -8,6 +8,10 @@ Publishes random weather updates
 import zmq
 from random import randrange
 
+from util import display_version
+
+
+display_version()
 
 context = zmq.Context()
 socket = context.socket(zmq.PUB)
