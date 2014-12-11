@@ -31,7 +31,7 @@ func main() {
 	var err error
 	var temp int64
 	updateNumber := 5
-	total_temp := 0
+	totalTemp := 0
 	filter := "10036"
 
 	// find zipcode
@@ -50,9 +50,9 @@ func main() {
 		temps = strings.Split(string(datapt), " ")
 		temp, err = strconv.ParseInt(temps[1], 10, 64)
 		if err == nil {
-			total_temp += int(temp)
+			totalTemp += int(temp)
 		}
 	}
 
-	fmt.Printf("Average temperature for zipcode %s was %dF \n\n", filter, total_temp/updateNumber)
+	fmt.Printf("Average temperature for zipcode %s was %dF \n\n", filter, totalTemp/updateNumber)
 }
